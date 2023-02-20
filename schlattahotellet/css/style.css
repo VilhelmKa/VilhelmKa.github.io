@@ -1,0 +1,46 @@
+:root{
+    --navbar-height:92px;
+    --main-color: black;
+    --secondary-color: #FEE906;
+    --text-color: white;
+}
+
+nav{
+    height: var(--navbar-height);
+    background-color: var(--main-color);
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    padding: 0 40px;
+}
+
+.logo{
+    border: 2px solid var(--secondary-color);
+    color: var(--secondary-color);
+    text-align: center;
+    padding: 20px;
+    line-height: 1.1;
+    background-image: url(../img);
+    text-shadow: 3px 3px 3px black;
+}
+
+.logo h2{
+    font-size: 14px;
+    text-transform: capitalize;
+    font-style: italic;
+}
+
+.body{
+    font-family: "open-sans";
+}
+
+nav ul{
+    display: flex;
+    gap: 100px;
+    color: var(--text-color);
+   
+
+}
+
+
+
