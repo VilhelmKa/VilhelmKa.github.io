@@ -41,16 +41,15 @@ nav ul{
     display: flex;
     gap: 100px;
     color: var(--text-color);
-    list-style: none; /* remove default list styles */
-    margin: 0; /* remove default margin */
-    padding: 0; /* remove default padding */
-    margin-right: 40px;
+    list-style: none; 
+    margin: 0; 
+    padding: 0; 
 }
 
 nav ul li a{
     color: var(--text-color);
     text-decoration: none;
-    position: relative; /* add position relative for pseudo elements */
+    position: relative; 
 }
 
 nav ul li a:hover{
@@ -65,58 +64,89 @@ nav ul li a::before{
     width: 100%;
     height: 2px;
     background-color: var(--secondary-color);
-    transform: scaleX(0); /* hide the underline */
-    transition: transform 0.3s ease-out; /* add transition effect */
+    transform: scaleX(0); 
+    transition: transform 0.3s ease-out; 
 }
 
 nav ul li a:hover::before{
-    transform: scaleX(1); /* show the underline on hover */
+    transform: scaleX(1); 
 }
 
-/* Add media query for smaller screens */
-@media (max-width: 768px){
-    nav ul{
-        display: none; /* hide the navigation links */
-        flex-direction: column; /* change to a column layout */
-        position: absolute;
-        top: var(--navbar-height);
-        left: 0;
-        right: 0;
-        background-color: var(--main-color);
-        z-index: 99;
-    }
-
-    nav ul li{
-        width: 100%;
-        text-align: center;
-        padding: 10px 0;
-    }
-
-    nav ul li a{
-        color: var(--text-color);
-    }
-
-    nav ul li a:hover{
-        color: var(--secondary-color);
-    }
-
-    nav .menu-toggle{
-        display: block; /* show the menu toggle button */
-        position: absolute;
-        top: 0;
-        right: 10px;
-        padding: 20px;
-        cursor: pointer;
-        z-index: 999;
-    }
-
-    nav .menu-toggle::before{
-        content: "\f0c9"; /* add hamburger icon */
-        font-family: "Font Awesome 5 Free";
-        font-weight: 900;
-        font-size: 24px;
-    }
+.hero{
+    width: 100vw;
+    height: 600px;
+    background: url(../img/sidekix-media-7jlVQPX8PLE-unsplash\(1\).jpg);
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    align-items: flex-end;
 }
+
+ .hero > div {
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    margin: 10px;
+    padding: 10px;
+    width: 60%;
+    margin: 0 auto 50px;
+    text-align: center;
+  }
+.hero > div > div {
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 10px;
+  }
+  
+ 
+  
+  .cards-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    max-width: 900px;
+  }
+  
+  .card {
+    margin: 10px;
+    width: 250px;
+    height: 350px;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+  }
+  
+  .card:hover img {
+    transform: scale(1.1);
+  }
+  
+  .card h2 {
+    position: absolute;
+    bottom: 30px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    width: 80%;
+    font-size: 24px;
+    color: white;
+    text-align: center;
+  }
+  
+  .card .underline {
+    width: 50px;
+    height: 2px;
+    background-color: white;
+    margin: 10px auto 0;
+  }
+  
+
+
+
 
 
  
