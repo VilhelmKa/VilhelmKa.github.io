@@ -5,6 +5,12 @@
     --text-color: white;
 }
 
+body {
+  background-color: var(--main-color);
+  font-family: "open-sans";
+}
+
+
 nav{
     height: var(--navbar-height);
     background-color: var(--main-color);
@@ -33,9 +39,7 @@ nav{
     font-style: italic;
 }
 
-.body{
-    font-family: "open-sans";
-}
+
 
 nav ul{
     display: flex;
@@ -108,10 +112,11 @@ nav ul li a:hover::before{
   
   .card {
     margin: 10px;
-    width: 250px;
-    height: 350px;
+    width: 270px;
+    height: 250px;
     position: relative;
     overflow: hidden;
+    text-shadow: 2px 2px 2px rgba(0,0,0,0.8);
   }
   
   .card img {
@@ -125,17 +130,17 @@ nav ul li a:hover::before{
     transform: scale(1.1);
   }
   
-  .card h2 {
+  .card-heading {
     position: absolute;
-    bottom: 30px;
-    left: 0;
-    right: 0;
-    margin: 0 auto;
-    width: 80%;
+    top: 50%;
+    left: 50%; 
+    transform: translate(-50%, -50%);
     font-size: 24px;
-    color: white;
+    color: var(--text-color);
     text-align: center;
   }
+
+  
   
   .card .underline {
     width: 50px;
@@ -143,6 +148,18 @@ nav ul li a:hover::before{
     background-color: white;
     margin: 10px auto 0;
   }
+  
+  .card:hover .card-heading h2 {
+    color: var(--secondary-color);
+  }
+  
+  .card:hover .card-heading .underline {
+    background-color: var(--secondary-color);
+  }
+
+
+
+  
   
 
 
