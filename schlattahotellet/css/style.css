@@ -1,161 +1,206 @@
-:root{
-    --navbar-height:92px;
-    --main-color: black;
-    --secondary-color: #FEE906;
-    --text-color: white;
+:root {
+  --navbar-height: 5.75rem;
+  --main-color: black;
+  --secondary-color: #FEE906;
+  --text-color: white;
 }
 
 body {
   background-color: var(--main-color);
-  font-family: "open-sans";
+  font-family: 'Open Sans', sans-serif;
 }
 
-
-nav{
-    height: var(--navbar-height);
-    background-color: var(--main-color);
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    padding: 0 40px;
-    position: sticky;
-    top: 0;
-    z-index: 100;
+nav {
+  height: var(--navbar-height);
+  background-color: var(--main-color);
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 0 2.5rem;
+  position: sticky;
+  top: 0;
+  z-index: 100;
 }
 
-.logo{
-    border: 2px solid var(--secondary-color);
-    color: var(--secondary-color);
-    text-align: center;
-    padding: 20px;
-    line-height: 1.1;
-    text-shadow: 3px 3px 3px black;
-    margin-left: 40px;
+.logo {
+  border: 0.125rem solid var(--secondary-color);
+  color: var(--secondary-color);
+  text-align: center;
+  padding: 1.25rem;
+  line-height: 1.1;
+  text-shadow: 0.1875rem 0.1875rem 0.1875rem black;
+  margin-left: 2.5rem;
 }
 
-.logo h2{
-    font-size: 14px;
-    text-transform: capitalize;
-    font-style: italic;
+.logo h2 {
+  font-size: 0.875rem;
+  text-transform: capitalize;
+  font-style: italic;
 }
 
-
-
-nav ul{
-    display: flex;
-    gap: 100px;
-    color: var(--text-color);
-    list-style: none; 
-    margin: 0; 
-    padding: 0; 
+nav ul {
+  display: flex;
+  gap: 6.25rem;
+  color: var(--text-color);
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
-nav ul li a{
-    color: var(--text-color);
-    text-decoration: none;
-    position: relative; 
+nav ul li a {
+  color: var(--text-color);
+  text-decoration: none;
+  position: relative;
 }
 
-nav ul li a:hover{
-    color: var(--secondary-color);
+nav ul li a:hover {
+  color: var(--secondary-color);
 }
 
-nav ul li a::before{
-    content: "";
-    position: absolute;
-    bottom: -5px;
-    left: 0;
-    width: 100%;
-    height: 2px;
-    background-color: var(--secondary-color);
-    transform: scaleX(0); 
-    transition: transform 0.3s ease-out; 
+nav ul li a::before {
+  content: "";
+  position: absolute;
+  bottom: -0.3125rem;
+  left: 0;
+  width: 100%;
+  height: 0.125rem;
+  background-color: var(--secondary-color);
+  transform: scaleX(0);
+  transition: transform 0.3s ease-out;
 }
 
-nav ul li a:hover::before{
-    transform: scaleX(1); 
+nav ul li a:hover::before {
+  transform: scaleX(1);
 }
 
-.hero{
-    width: 100vw;
-    height: 600px;
-    background: url(../img/sidekix-media-7jlVQPX8PLE-unsplash\(1\).jpg);
-    background-position: center;
-    background-size: cover;
-    display: flex;
-    align-items: flex-end;
+.hero {
+  width: 100vw;
+  height: 37.5rem;
+  background: url(../img/sidekix-media-7jlVQPX8PLE-unsplash\(1\).jpg);
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  align-items: flex-end;
 }
 
- .hero > div {
-    border: 1px solid rgba(255, 255, 255, 0.3);
-    margin: 10px;
-    padding: 10px;
-    width: 60%;
-    margin: 0 auto 50px;
-    text-align: center;
-  }
+.hero > div {
+  border: 0.0625rem solid rgba(255, 255, 255, 0.3);
+  margin: 0.625rem;
+  padding: 0.625rem;
+  width: 60%;
+  margin: 0 auto 3.125rem;
+  text-align: center;
+}
+
 .hero > div > div {
-    background-color: rgba(255, 255, 255, 0.8);
-    padding: 10px;
-  }
-  
- 
-  
-  .cards-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    margin: 0 auto;
-    max-width: 900px;
-  }
-  
-  .card {
-    margin: 10px;
-    width: 270px;
-    height: 250px;
-    position: relative;
-    overflow: hidden;
-    text-shadow: 2px 2px 2px rgba(0,0,0,0.8);
-  }
-  
-  .card img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: transform 0.5s ease;
-  }
-  
-  .card:hover img {
-    transform: scale(1.1);
-  }
-  
-  .card-heading {
-    position: absolute;
-    top: 50%;
-    left: 50%; 
-    transform: translate(-50%, -50%);
-    font-size: 24px;
-    color: var(--text-color);
-    text-align: center;
-  }
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 0.625rem;
+}
 
+.cards-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.card {
+  margin: 0.625rem;
+  flex: 1 1 30%;
+  height: 15.625rem;
+  position: relative;
+  overflow: hidden;
+  text-shadow: 0.125rem 0.125rem 0.125rem rgba(0, 0, 0, 0.8);
+}
   
-  
-  .card .underline {
-    width: 50px;
-    height: 2px;
-    background-color: white;
-    margin: 10px auto 0;
-  }
-  
-  .card:hover .card-heading h2 {
-    color: var(--secondary-color);
-  }
-  
-  .card:hover .card-heading .underline {
-    background-color: var(--secondary-color);
-  }
+.card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.card:hover img {
+  transform: scale(1.1);
+}
+
+.card-heading {
+  position: absolute;
+  top: 50%;
+  left: 50%; 
+  transform: translate(-50%, -50%);
+  font-size: 1.5rem;
+  color: var(--text-color);
+  text-align: center;
+}
+
+.card .underline {
+  width: 3.125rem; 
+  height: 0.125rem; 
+  background-color: white;
+  margin: 0.625rem auto 0; 
+}
+
+.card:hover .card-heading h2 {
+  color: var(--secondary-color);
+}
+
+.card:hover .card-heading .underline {
+  background-color: var(--secondary-color);
+}
+
+.button {
+  display: inline-block;
+  padding: 0.625rem 1.25rem; 
+  background-color: var(--main-color);
+  color: var(--text-color);
+  text-transform: uppercase;
+  text-align: center;
+  text-decoration: none;
+  font-size: 6.25rem;
+  border-radius: 0.3125rem; 
+  transition: background-color 0.3s ease;
+}
+
+.button:hover {
+  color: var(--secondary-color);
+}
+
+.button-container {
+  text-align: center;
+  margin-top: 1.25rem;
+}
+
+.paket {
+  color: var(--text-color);
+ text-align: center;  
+}
+
+.paket-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.paket-card {
+  width: 300px;
+  margin: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  overflow: hidden;
+  position: relative;
+}
+
+.paket-card:hover h2 {
+  color: var(--secondary-color);
+}
+
+.paket-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
 
 
 
