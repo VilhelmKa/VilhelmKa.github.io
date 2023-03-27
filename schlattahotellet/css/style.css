@@ -221,6 +221,28 @@ nav ul li a:hover::before {
   opacity: 0.5;
 }
 
+.se-alla-erbjudanden-button-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.se-alla-erbjudanden {
+  border: 2px solid white;
+  background-color: transparent;
+  color: white;
+  font-size: 16px;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.se-alla-erbjudanden:hover {
+  color: var(--secondary-color);
+  border-color: var(--secondary-color);
+}
+
+
 
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
 body{
