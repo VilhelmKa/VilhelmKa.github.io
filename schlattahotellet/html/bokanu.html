@@ -6,8 +6,8 @@
         <title>Schlattahotellet</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="./css/reset.css">
-        <link rel="stylesheet" href="./css/style.css">
+        <link rel="stylesheet" href="../css/reset.css">
+        <link rel="stylesheet" href="../css/style.css">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
@@ -16,7 +16,7 @@
     <body>
         <header>
             <nav>
-                <a href="index.html"><div class="logo">
+                <a href="../index.html"><div class="logo">
                     <h1>SH</h1>
                     <h2>Schlättahottelet</h2>
                 </div>
@@ -24,23 +24,57 @@
                 
                 <div>
                     <ul role="list">
-                        <li><a href="#">Hem</a></li>
-                        <li><a href="Bokanu.html">Boka</a></li>
-                        <li><a href="#">Resturang</a></li>
-                        <li><a href="#">Upplevelser</a></li>
-                        <li><a href="#">Rum</a></li>
-                        <li><a href="#">Erbjudanden</a></li>
+                        <li><a href="../index.html">Hem</a></li>
+                        <li><a href="Bokanu.html" class="active">Boka</a></li>
+                        <li><a href="./restaruang.html" >Resturang</a></li>
+                        <li><a href="./upplevelser.html">Upplevelser</a></li>
+                        <li><a href="./rum.html">Rum</a></li>
+                        <li><a href="./erbjudanden.html">Erbjudanden</a></li>
                     </ul>
                 </div>
             </nav>
         </header>
         <main>
-            <div class="hero">
-                <img src="./img/ralph-ravi-kayden-zSG-kd-L6vw-unsplash(1).jpg" alt="">
-            </div>    
-
-
-
+          <section class="booking-section">
+            <div class="background-image"></div>
+            <div class="booking-form">
+          <div class="booking-form">
+            <form>
+              <label for="arrival">Ankomst:</label>
+              <input type="date" id="arrival" name="arrival" required>
+              <label for="departure">Avresa:</label>
+              <input type="date" id="departure" name="departure" required>
+              <label for="rooms">Antal rum:</label>
+              <select id="rooms" name="rooms" required>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+              </select>
+              <label for="adults">Vuxna:</label>
+              <select id="adults" name="adults" required>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+              </select>
+              <label for="children">Barn:</label>
+              <select id="children" name="children" required>
+                <option value="0">0</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+              </select>
+              <button type="submit" id="check-availability">Check Availability</button>
+            </form>
+          </div>
+        </div>
+      </section>
+          
         </main>
         <footer class="footer">
             <div class="container">
