@@ -57,7 +57,7 @@ nav ul li a:hover {
   color: var(--secondary-color);
 }
 
-nav ul li a::before {
+nav ul li a:not(.active):before {
   content: "";
   position: absolute;
   bottom: -0.3125rem;
@@ -358,7 +358,11 @@ a.active {
   background-size: cover;
   background-position: center;
   opacity: 0.5;
-  h
+  z-index: -1;
+}
+
+.slider {
+color: #d4d4d4;
 }
   
 .booking-form {
@@ -371,7 +375,8 @@ a.active {
 .booking-form label {
   display: inline-block;
   margin-right: 10px;
-  color: #fff;
+  margin-top: 480px;
+  color: var(--text-color);
 }
 
 .booking-form input,
@@ -384,21 +389,23 @@ a.active {
   font-size: 16px;
   color: var(--text-color);
   background-color: rgba(255, 255, 255, 0);
+  border-bottom: 2px solid var(--text-color);
+  position: relative;
 }
 
-.booking-form button {
-  background-color: var(--secondary-color);
-  color: var(--text-color);
-  border: none;
-  border-radius: 5px;
-  padding: 10px 20px;
-  font-size: 16px;
+input[type="date"]::-webkit-calendar-picker-indicator {
+  background: transparent;
+  bottom: 0;
+  color: transparent;
   cursor: pointer;
+  height: auto;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: auto;
 }
 
-.booking-form button:hover {
-  background-color: #f0b300;
-}
 
 .booking-form select {
   max-width: 100px;
@@ -409,14 +416,14 @@ a.active {
 }
 
 .booking-form button {
-  background-color: #ffcc00;
-  color: var(--text-color);
+  background-color: var(--secondary-color);
+  color: var(--main-color);
   border: none;
   border-radius: 5px;
   padding: 10px 20px;
   font-size: 16px;
   cursor: pointer;
-  margin-top: 10px;
+  margin-top: 480px;
   float: right;
   clear: both;
 }
@@ -424,6 +431,8 @@ a.active {
 .booking-form button:hover {
   background-color: #f0b300;
 }
+
+
 
 
 
