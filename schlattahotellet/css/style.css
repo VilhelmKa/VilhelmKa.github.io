@@ -73,6 +73,57 @@ nav ul li a:hover::before {
   transform: scaleX(1);
 }
 
+.menu-toggle {
+ display: none;
+}
+
+.menu-icon {
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: var(--text-color);
+  display: none;
+}
+.menu-toggle:checked ~ div ul{
+  display: block;
+}
+
+
+@media (max-width: 650px) {
+  
+  .menu-icon {
+    display: block;
+  }
+  
+  nav ul {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    top: var(--navbar-height);
+    left: 0;
+    width: 100%;
+    background-color: var(--main-color);
+    padding: 2rem 0;
+    z-index: 99;
+  }
+
+
+  
+  nav ul li {
+    margin: 1rem 0;
+  }
+  
+  nav ul li a {
+    color: var(--text-color);
+    font-size: 1.25rem;
+  }
+  
+  .menu-toggle:checked ~ ul {
+    display: flex;
+  }
+}
+
+
 .hero {
   width: 100vw;
   height: 37.5rem;
@@ -365,12 +416,13 @@ a.active {
 color: #d4d4d4;
 }
   
-.booking-form {
+#booking-form {
   background-color: rgba(255, 255, 255, 0);
   padding: 20px;
   border-radius: 10px;
   margin: auto;
 }
+
 
 .booking-form label {
   display: inline-block;
